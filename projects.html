@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="/static/style.css">
+<div class="container">
+<h1>📂 Projects</h1>
+
+{% for p in projects %}
+<div class="card">
+<a href="/project/{{ p.id }}"><b>{{ p.name }}</b></a>
+<p>{{ p.description }}</p>
+</div>
+{% endfor %}
+</div>

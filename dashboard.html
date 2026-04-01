@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/static/style.css">
+<div class="container">
+<h1>🤝 Teams</h1>
+
+{% for t in teams %}
+<div class="card">
+{{ t[0].name }} + {{ t[1].name }} + {{ t[2].name }}
+</div>
+{% endfor %}
+
+<button onclick="location.href='/save_teams'">Save</button>
+<button onclick="location.href='/teams'">View</button>
+<button onclick="location.href='/create_project'">Project</button>
+<button onclick="location.href='/restart'" style="background:red;">Restart</button>
+</div>

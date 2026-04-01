@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/static/style.css">
+<div class="container">
+<h1>👥 Teams</h1>
+
+<button onclick="location.href='/refresh_teams'">Refresh</button>
+
+{% for t in teams %}
+<div class="card">
+{{ t.member1 }} + {{ t.member2 }} + {{ t.member3 }}
+</div>
+{% endfor %}
+
+<button onclick="location.href='/'">Home</button>
+</div>

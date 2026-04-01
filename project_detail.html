@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/static/style.css">
+<div class="container">
+
+<h1>{{ project.name }}</h1>
+<p>{{ project.description }}</p>
+
+<div class="card">
+<form method="POST">
+<input name="task" placeholder="Add Task">
+<button>Add</button>
+</form>
+</div>
+
+<div class="card">
+{% for t in tasks %}
+<p>
+{{ t.title }} - {{ t.status }}
+{% if t.status == "To Do" %}
+<a href="/complete_task/{{ t.id }}">✔</a>
+{% endif %}
+</p>
+{% endfor %}
+</div>
+
+</div>
